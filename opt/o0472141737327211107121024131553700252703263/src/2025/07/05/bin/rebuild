@@ -1,0 +1,34 @@
+#!/bin/bash
+
+test -d c  ||  exit 1
+test -d h  ||  exit 1
+test -d e  ||  exit 1
+test -d o  ||  exit 1
+
+# ATTEMPT TO REMOVE FILES ONLY IF THERE ARE FILES TO REMOVE
+test $(ls -a o | wc --line) -gt 2  &&  rm o/*
+test $(ls -a e | wc --line) -gt 2  &&  rm e/*
+
+A=$(ls c)
+declare -r A
+
+for C in $A
+do
+    [[ "$C" =~ ^[a-z][a-z_0-9]{,30}[.]c$ ]] || \
+    {
+        echo >& 2 "$0"': Unexpected file name: "c/'"$C"'"'
+        exit 1
+    }
+done
+
+for C in $A
+do
+    B=${C:0:-1}o
+    gcc -c -Wall -std=c11  -iquote h  -o o/$B  c/$C || \
+    {
+        echo >& 2 "$0: Could not compile c/$C"
+        exit 1
+    }
+done
+
+gcc  -Wall -std=c11  -iquote h  -o e/main  o/*

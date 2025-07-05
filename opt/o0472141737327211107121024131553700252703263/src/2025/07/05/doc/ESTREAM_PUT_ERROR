@@ -1,0 +1,15 @@
+The estream_put_error function writes indirectly
+to the standard error stream, on its own logical
+line, a message in the form of a colon-separated
+list of strings.  When called as intended, the
+strings indicate: That an error message is being
+reported, the file name containing the source
+for the call (#0), the line number of that file
+(#1), the function from which the call was made
+(#2), and some text describing program state,
+progress, etc. (#3).
+  The intent is that the call be made with the
+TRACE macro in the place of the initial three
+arguments, e.g.:
+        estream_put_error (
+            TRACE , "some message" )

@@ -1,0 +1,182 @@
+Standard Error Stream Handling
+==============================
+
+The standard error stream shall be line-
+buffered.
+
+
+Character Display Semantics
+---------------------------
+
+### Interface
+
+An indirect interface to the display device
+connected to the standard error stream (the
+display) is provided by the "estream.h" header
+file and associated object code.
+  Only if all writes to the standard error stream
+are accomplished via the "estream.h" interface
+(whether directly or indirectly), the semantics
+herein are enforced.
+
+### Display Width
+
+For the purposes of establishing constraints for
+the handling of the standard error stream, the
+display is assumed to have the same, finite
+number of positions N on each line.  The intent
+of the constraints is to prevent unspecified,
+undefined, and implementation-defined behavior
+and to facilitate well-defined
+behavior.
+
+### Active Position
+
+Unless otherwise specified herein, a display
+connected to the standard error stream shall
+behave according to [N2176 5.2.2], "Character
+display semantics."
+  Since
+  
+        "if the active position is at the final position
+        "of a line (if there is one), the behavior of
+        "the display device is unspecified"
+        (N2176 5.2.2-1),
+
+the cursor is not allowed to advance to the
+final position.
+  Since
+
+        "the intent of writing a printing character...
+        "is to display a graphic representation of that
+        "character at the active position and then
+        "advance the active position to the next
+        "position on the current line" (N2176 5.2.2-1),
+
+for a given line, two fewer than N printing
+characters shall be written, because writing as
+many as one fewer than N printing characters may
+cause the active position to be advanced to the
+final position of a line.
+  Therefore, the maximum number of printing
+characters to be printed on a single line is 
+two fewer than N.
+
+### Character Set
+
+  The display shall be capable of printing
+the graphic characters of the basic source
+character set as well as the space character,
+i.e., characters from among the basic printing
+characters.
+  Each character written to the standard error
+stream shall shall be a new-line character
+(U+000a), a space character (U+0020), or one of
+the graphic characters of the basic source
+character set.
+  The graphic characters of the basic source
+character set are
+
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        abcdefghijklmnopqrstuvwxyz
+        0123456789
+        !"#%&'()*+,-./:;<=>?[\]^_{|}~
+
+  The effect of writing a graphic character
+shall produce a visible effect on the display:
+
+        "to display a graphic representation of that
+        "character at the active position and then
+        "advance the active position to the next
+        "position on the current line" (N2176 5.2.2).
+
+### Buffering
+
+  The display shall be configured to present
+each line of the standard error stream on a
+single line of the display. And each line of the
+display that presents a line of the standard
+error stream shall present no other characters
+(e.g., from other sources such as the standard
+output stream).
+
+### Spaces
+
+The effect of writing a space character shall
+produce a visible effect on the display: a
+request to write a space character followed by a
+new-line character shall result in a substitute
+graphic character being written instead of the
+space character, followed by a new-line
+character.
+
+### Other Characters
+
+A request to write a character not among
+those mentioned above shall be to write a
+substitute graphic character from the basic
+source character set.
+
+
+Line Display Semantics
+----------------------
+
+Physical lines are separated by end-of-line
+indicators, which are the only invisible symbols
+permitted to be sent to the display.
+  Text is displayed using a two-column system.
+The second column contains the---possibly
+translated---characters explicitly sent to the
+standard error stream. Translation occurs
+according to the discussion under the "Spaces"
+and "Other Characters" headings, above.
+  The first column of each physical line
+contains a graphic character that indicates
+whether the current physical line is a new
+logical line or the continuation of a logical
+line.
+
+
+Output to the Standard Error Stream---"estream.h"
+-------------------------------------------------
+
+### Introduction
+
+It is intended that all output to the standard
+error stream flow through the interface provided
+by the estream.h header.
+  The estream functions abort (N2176 7.22.4.1)
+on failure. Wheras the purpose of the standard
+error stream is to communicate to the user any
+program errors, continuing execution after an
+error occurs on the standard error stream would
+tend to mislead the user. And knowingly
+misleading the user is unacceptable.
+
+### Functions
+
+  The estream_reset function initializes internal
+objects and prepares the program for processing
+output destined for the standard error stream.
+Unless the estream_reset function is called
+before writing to the standard error stream,
+the behavior of the estream interface is undefined.
+  The estream_endline function starts a new
+logical line on a new physical line.
+  The estream_flush function prompts the host
+system to display the text in the internal
+buffer by completing a line. A call to
+estream_flush should be necessary only during
+normal program termination.
+  The estream_putc function sends #0 the
+internal buffer.
+  The estream_put_blank_line function writes a
+blank line.
+  The estream_wrap function starts a new
+physical line and continues the current logical
+line.
+  The estream_room function returns the number
+of positions on the current line which are
+available for writing printing characters. The
+estream_room function is intended to support
+formatting such as word wrap.

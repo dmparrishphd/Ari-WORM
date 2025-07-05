@@ -1,0 +1,23 @@
+The charsetg_reset function populates the
+charsetg array with the graphic characters of
+the basic character set (N2176 5.2.1). See also
+"The charsetg array."
+  The charsetg array. After a call to the
+charsetg_reset function, the charsetg array
+contains a graphic character of the basic
+character set for each value in the range of
+values that can be stored in an unsigned char
+object. In particular, if x designates an
+unsigned char object, is less than or equal to
+CHAR_MAX and ( char ) x is one of the graphic
+characters of the basic character
+set, then charsetg [ x ] == x. For all other
+values of x, charsetg [ x ] == charsetp_default,
+except that charsetg [ ' ' ] ==
+charsetg_default. See also "The charsetg_default
+char object" and "The estream_putc function."
+  The charsetg_default char object specifies
+which graphic character from the basic character
+set (N2176 5.2.1) is substituted for the space
+character when building the charsetg array. See
+also "The charsetg array."

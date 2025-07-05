@@ -1,0 +1,5 @@
+The characters function is intended as a
+subprogram to demonstrate output to the standard
+error stream. The characters function writes to
+the standard error stream all the printing
+characters of the basic character set.

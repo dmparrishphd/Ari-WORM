@@ -1,0 +1,3 @@
+The doatexit function is intended to be used as
+the argument to the atexit function (N2176
+7.22.4.2).

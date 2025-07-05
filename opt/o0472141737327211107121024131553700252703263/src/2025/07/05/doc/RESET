@@ -1,0 +1,3 @@
+The reset function is intended to be called
+during program startup. The reset function
+initializes several objects.

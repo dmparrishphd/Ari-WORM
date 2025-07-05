@@ -1,0 +1,5 @@
+The unittests function is intended for testing
+during development and when the system is being
+ported to a new platform. The unitttests
+function is intended to be accessed during a
+corresponding branch of the main function.

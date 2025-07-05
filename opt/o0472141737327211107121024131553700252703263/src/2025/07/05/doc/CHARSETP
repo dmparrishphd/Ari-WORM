@@ -1,0 +1,24 @@
+The charsetp_reset function populates the
+charsetp array with the printing characters of
+the basic character set (N2176 5.2.1). See also
+"The charsetp array."
+  The charsetp array. After a call to the
+charsetp_reset function, the charsetp array
+contains a printing character of the basic
+character set for each value in the range of
+values that can be stored in an unsigned char
+object. In particular, if x designates an
+unsigned char object, is less than or equal
+to CHAR_MAX and ( char ) x is one of
+the printing character of the basic character
+set, then charsetp [ x ] == x. For all other
+values of x, charsetp [ x ] ==
+charsetp_default. See also "The charsetp_default
+char object" and "The estream_putc function."
+  The charsetp_default char object specifies
+which printing character from the basic
+character set (N2176 5.2.1) is substituted for
+each character that is not among the printing
+characters of the basic character set when
+building the charsetp array. See also "The
+charsetp array."

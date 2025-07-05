@@ -1,0 +1,6 @@
+#ifndef H_UPPERS
+#define H_UPPERS
+
+#define UPPERS   "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+#endif

@@ -1,0 +1,3 @@
+The main function is called at program startup.
+The main function processes command-line
+arguments supplied by the host environment.

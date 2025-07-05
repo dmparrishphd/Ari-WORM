@@ -1,0 +1,3 @@
+The LOWERS macro is defined as a string literal
+of the lower case letters of the basic character
+set (N2176 5.2.1-2), in alphabetical order.

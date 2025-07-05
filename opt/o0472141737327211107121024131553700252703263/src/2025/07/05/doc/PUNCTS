@@ -1,0 +1,4 @@
+The PUNCTS macro is defined as a string literal
+of the punctuation characters the basic
+character set, in the order presented in N2176
+5.2.1-3.

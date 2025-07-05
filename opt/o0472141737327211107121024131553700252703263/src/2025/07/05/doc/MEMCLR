@@ -1,0 +1,4 @@
+The memclr function clears the bits of the first
+#1 characters of the object pointed to by #0.
+The caller must guarantee that the corresponding
+characters are accessible.

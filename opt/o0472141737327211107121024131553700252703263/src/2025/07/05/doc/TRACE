@@ -1,0 +1,12 @@
+The TRACE macro is intended to be used in the
+place of the initial three arguments ("trace"
+sounds like the Spanish word for three) of calls
+to
+    -   the estream_put_note function,
+    -   the estream_put_warning function, and
+    -   the estream_put_error function
+so that any of those calls print
+    -   the presumed source file name,
+    -   the presumed line number, and
+    -   the name of the function
+wherein the call is found.

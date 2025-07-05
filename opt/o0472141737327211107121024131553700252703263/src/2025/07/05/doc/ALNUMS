@@ -1,0 +1,4 @@
+The ALNUMS macro is defined as a string literal
+of the decimal digits and alphabetical
+characters characters of the basic character set
+(N2176 5.2.1).

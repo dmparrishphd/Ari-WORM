@@ -1,0 +1,9 @@
+The CHARSET_NMEMB macro is defined as an integer
+constant giving the number of characters in the
+character set used for writing indirectly to
+standard error by the estream functions.
+  The CHARSET_SIZE macro is defined as an
+integer constant giving the size of the arrays
+that represent the character tables used for
+writing indirectly to standard error by the
+estream functions.

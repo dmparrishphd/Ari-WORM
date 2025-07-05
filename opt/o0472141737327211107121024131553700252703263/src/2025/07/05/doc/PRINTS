@@ -1,0 +1,3 @@
+The PRINTS macro is defined as a string literal
+of the printing characters of the basic
+character set (N2176 5.2.1).

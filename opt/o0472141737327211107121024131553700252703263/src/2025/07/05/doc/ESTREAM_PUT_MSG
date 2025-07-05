@@ -1,0 +1,18 @@
+The estream_put_msg function is intended to be
+called by
+    -   estream_put_note,
+    -   estream_put_warning, or
+    -   estream_put_error.
+It writes indirectly to the standard error
+stream, on its own logical line, a message in
+the form of a colon-separated list of strings.
+When called as intended, the strings indicate:
+the type of message, the file name containing
+the source for the call (#1), the line number of that
+file (#2), the function from which the call was
+made (#3),
+and some text describing program state,
+progress, etc. (#4).
+  The type of message is asserted by #0: a note
+if #0 is zero, a warning if #0 is less than
+zero, and an error if #0 is greater than zero.

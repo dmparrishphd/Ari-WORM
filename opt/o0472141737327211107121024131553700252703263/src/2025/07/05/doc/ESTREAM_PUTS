@@ -1,0 +1,17 @@
+The estream_puts function indirectly writes to
+the standard error stream a character for each
+non-null character of the string pointed to by
+#0.  Each character written is computed by using
+the corresponding member of the string as the
+index of the character in the charsetp character
+array, and fetching the corresponding character,
+except that spaces at the end of lines are
+replaced by a corresponding graphic character.
+  If #0 is a null pointer, the estream_puts
+function behaves as if #0 pointed to a null
+string.
+  The caller must guarantee that #0 indicates an
+object terminated by a null character.
+  The estream_puts function is intended to be
+called with arguments computed from string
+literals found in the source.

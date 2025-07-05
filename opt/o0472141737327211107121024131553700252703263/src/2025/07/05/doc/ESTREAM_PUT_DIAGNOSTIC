@@ -1,0 +1,9 @@
+The estream_put_diagnostic function is intended
+to be called by estream_put_msg.  It writes
+indirectly to the standard error stream, on its
+own logical line, a message in the form of a
+colon-separated list of strings.  When called as
+intended, the strings indicate: the file name
+containing the source for the call (#0), the
+line number of that file (#1), and the function
+from which the call was made (#2).
