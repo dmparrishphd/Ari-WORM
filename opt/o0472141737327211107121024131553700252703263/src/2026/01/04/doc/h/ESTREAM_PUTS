@@ -1,0 +1,26 @@
+
+
+
+The estream_puts Function "estream_puts.h"
+
+            The estream_puts function takes no action if #0
+            is a null pointer. Otherwise, the estream_puts
+            function indirectly writes to the standard error
+            stream the initial non-null characters of the
+            string pointed to by #0.
+              Characters are sent to the standard error
+            stream via repeated calls to the estream_putc
+            function, and characters sent to the standard
+            error stream will be in accordance with the
+            estream_putc function.
+              The number of characters written is limited to
+            the lesser of the minimum value of INT_MAX and
+            the product of ESTREAM_HEIGHT and ESTREAM_WIDTH.
+              If #0 is a null pointer, the estream_puts
+            function behaves as if #0 pointed to a null
+            string.
+              The caller must guarantee that #0 indicates an
+            object terminated by a null character.
+              The estream_puts function is intended to be
+            called with arguments computed from string
+            literals found in the source.

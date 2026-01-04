@@ -1,0 +1,13 @@
+
+
+
+The estream_put_hstr Function
+
+            The estream_put_hstr function sends the non-null
+            characters of the string specified by #0 to the
+            standard error stream via the estream_putc
+            function. 
+              The estream_put_hstr function behaves as if
+            the final character of the character array
+            specified by #0 were a terminating null
+            character.

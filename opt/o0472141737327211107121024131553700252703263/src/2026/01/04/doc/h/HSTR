@@ -1,0 +1,32 @@
+
+
+
+Short Strings "hstr.h"
+
+    Macros
+
+        HSTR_SIZE_MAX
+
+            A short string is a string having no more than
+            HSTR_SIZE_MAX characters (including the TNC). A
+            short string of printing characters may be
+            displayed on a single line of the display
+            connected to the standard error stream.
+              Short strings are typically stored in an array
+            of type { char [ HSTR_SIZE_MAX ] }.
+              See also functions named with the prefix
+            or infix "hstr."
+
+        HSTR_INDEX_MAX
+
+            Processes operating on short strings should not
+            attempt to access characters of short strings
+            beyond the character with index HSTR_INDEX_MAX.
+              In a proper short string, the character with
+            index HSTR_INDEX_MAX should be a null character.
+
+        HSTR_LEN_MAX
+
+            If p points to the initial character of a short
+            string, strlen ( p ) should not return a value
+            greater than HSTR_LEN_MAX.

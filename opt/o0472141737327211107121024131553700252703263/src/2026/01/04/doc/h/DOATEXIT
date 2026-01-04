@@ -1,0 +1,13 @@
+
+
+
+The doatexit Function "doatexit.h"
+
+            The doatexit function is intended to allow a
+            single call of the atexit function (N2176
+            7.22.4.2) to specify processing that should
+            occur during normal program termination.
+              By design, the atexit function is called
+            during program initialization.
+              The doatexit function is intended to be used
+            as the argument to the atexit function.

@@ -1,0 +1,22 @@
+
+
+
+Reading from Standard Input
+
+            The istream_refetch function is intended to be
+            the primary means by which data is read from
+            standard input. While the functions
+
+                -   istream_fetch,
+                -   istream_read,
+                -   istream_skim,
+                -   istream_scan,
+                -   istream_scrape,
+                -   istream_skip, and
+                -   istream_pop
+
+            also read from standard input, they are designed
+            to support (whether directy or indirectly) the
+            istream_refetch function and are not intended to
+            be called other than as components of the
+            istream_refetch function.

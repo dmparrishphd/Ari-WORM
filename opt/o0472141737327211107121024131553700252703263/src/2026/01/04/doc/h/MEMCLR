@@ -1,0 +1,9 @@
+
+
+
+The memclr Function "memclr.h"
+
+            The memclr function clears the bits of the
+            initial #1 characters of the object pointed to
+            by #0.  The caller must guarantee that the
+            corresponding characters are accessible.

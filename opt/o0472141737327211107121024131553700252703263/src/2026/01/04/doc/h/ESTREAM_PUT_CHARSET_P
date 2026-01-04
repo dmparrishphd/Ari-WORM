@@ -1,0 +1,8 @@
+
+
+
+The estream_put_charset_p Function "estream_put_charset_p.h"
+
+            The estream_put_charset_p function writes to the
+            standard error stream all the characters in
+            character set P.

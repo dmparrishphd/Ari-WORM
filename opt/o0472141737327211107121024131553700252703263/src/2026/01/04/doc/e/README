@@ -1,0 +1,18 @@
+
+
+
+Endnotes
+
+            The endnotes cover topics that are not
+            particular to a single header file, but span
+            multiple header files.
+
+            The endnotes are indexed by the file doc-e/INDEX
+              There are two types of records in the INDEX.
+            One record lists a Keyword, a related Topic, and
+            the corresponding Item ID.  The other type of
+            record lists an Item ID along with the Title of
+            the Item.
+            
+            Items are stored in files named by Item ID under
+            the items subdirectory.

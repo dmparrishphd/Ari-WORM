@@ -1,0 +1,13 @@
+
+
+
+Control Flow Macros
+
+            Control Flow macros include:
+
+                -   DO "do.h"
+                -   GO "go.h"
+                -   TRI "tri.h"
+
+            Their effects on control flow differ in the
+            cases of atypical behavior and error.

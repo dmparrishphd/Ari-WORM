@@ -1,0 +1,83 @@
+
+
+
+Character Sets "charsets.h"
+
+    The charsets_reset function
+
+            Two character sets, G and P, are defined with a
+            call to the charsets_reset function. The
+            charsets_reset function should be called just
+            after program startup, during program
+            initialization.
+
+            Character set G contains only the graphic
+            characters of the basic character set (N2176
+            5.2.1-1):
+
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                abcdefghijklmnopqrstuvwxyz
+                0123456789
+                !"#%&'()*+,-./:;<=>?[\]^_{|}~
+
+            The characters
+
+                -   U+0024 (DOLLAR SIGN),
+                -   U+0040 (COMMERCIAL AT), and
+                -   U+0060 (GRAVE ACCENT)
+
+            are not in character set G.
+              Character set P contains only the printing
+            characters of the basic character set (N2176
+            5.2.1-1).
+              Character set P contains exactly one more
+            element than character set G: the space
+            character.
+              Each character in character set P is assigned
+            a unique index in the range 0 to UCHAR_MAX
+            inclusive. Likewise for character set G.
+
+    The chrg function
+
+              Each index in the range 0 to UCHAR_MAX
+            inclusive is assigned a character from character
+            set G; this mapping may be examined by calls to
+            the chrg function. 
+
+    The chrp function
+
+              Each index in the range 0 to UCHAR_MAX
+            inclusive is assigned a character from character
+            set P; this mapping may be examined by calls to
+            the chrp function. 
+
+            The mappings represented by the chrg and chrp
+            functions are identical except for the case
+            where the index maps to a space in character set P.
+
+    Graphical Space
+
+            A graphical character standing for a space
+            character should be returned by the call
+            { chrg ( space ) }. Such a "graphic space" is
+            intended to be substituted for a space character
+            when a space character is submitted but a
+            character in G is required. It is intended that
+            in the sequence of characters written to the
+            standard error stream, non-graphic characters
+            not immediately precede new-line characters.
+            The graphic space is intended to facilitate
+            enforcing such a scheme. 
+
+    Substitute Character
+
+            A graphical character standing for a nonprinting
+            character should be returned by the call
+            { chrg ( newline ) }. Such a "substitute
+            character" is intended to be substituted when
+            character not in P is submitted but a character
+            in P is required. It is intended that all
+            characters written to the standard error stream
+            produce a visible representation. The substitute
+            character is intended to facilitate enforcing
+            such a scheme.

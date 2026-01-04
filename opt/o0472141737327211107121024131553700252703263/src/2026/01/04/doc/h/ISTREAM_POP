@@ -1,0 +1,20 @@
+
+
+
+The istream_pop Function "istream_pop.h"
+
+            By design, the istream_pop function should be
+            the only means by which characters are attempted
+            to be read from stdin.
+              The istream_pop function attempts to read a
+            character from stdin. If and only if character
+            is read successfully, it is copied into the
+            object specified by #0.
+              The istream_pop function returns zero on
+            success.  Otherwise, if an error occurred, The
+            istream_pop function returns a positive value.
+            Otherwise, atypical behavior occurred and the
+            istream_pop function returns a negative value.
+            Atypical behavior includes an end-of-file
+            condition in stdin as well as the occurrence of
+            an interactive attention signal.

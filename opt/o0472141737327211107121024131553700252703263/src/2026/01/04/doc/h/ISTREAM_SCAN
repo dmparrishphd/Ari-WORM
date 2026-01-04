@@ -1,0 +1,31 @@
+
+
+
+The istream_scan function "istream_scan.h"
+
+            The istream_scan function attempts to read one
+            line from stdin. The istream_scan function
+            assumes that reading beings at the beginning of
+            a logical line.
+              If an error occurs, a positive value is
+            returned.
+              Otherwise, if an end-of-file condition occurs,
+            a negative value is returned, indicating
+            atypical behavior.
+              Otherwise, if more than HSTR_LEN_MAX
+            characters have been read before a new-line
+            character has been read, an attempt is made to
+            skip subsequent characters until a new-line
+            character is read. If, when attempting to skip,
+            the number of characters read (including those
+            read prior to the skip-attempt) accumulates to
+            ISTREAM_SKIP_LIMIT before a new-line character
+            is encountered, a positive value is returned,
+            indicating an error; otherwise, the line is
+            skipped and a negative value is returned,
+            indicating atypical behavior.
+              Otherwise, a) a line has been successfully
+            read into the object specified by #0, which
+            stores the corresponding string---the new-line
+            character is discarded---and b) zero is
+            returned, indicating success.

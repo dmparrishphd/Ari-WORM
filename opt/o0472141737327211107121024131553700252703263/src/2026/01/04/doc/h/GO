@@ -1,0 +1,52 @@
+
+
+
+The GO function-like macro "go.h"
+
+            The GO function-like macro has the effect that
+                -   an int object is declared in the scope where
+                    the macro invocation appears,
+                -   the function specified by #1 is called with
+                    the arguments specified by any arguments
+                    specified after #1 then,
+                -   the return value of the call is assigned to
+                    the variable specified by #0.
+                -   If the call returns a positive value, an
+                    error message is sent to the standard error
+                    stream and the function containing the macro
+                    invocation returns 1. Otherwise,
+                -   if the call returned zero, the value of the
+                    variable specified by #0 is set to 0, and
+                    execution continues. Otherwise,
+                -   the call returned an negative value, the
+                    value of the variable specified by #0 is set
+                    to -1, and execution continues.
+
+    Example
+    
+            The n function always returns -1. The z function
+            always returns 0. And the p function always
+            returns 1.
+
+            int zero ( void ) { return  0 ; }
+
+            int pos  ( void ) { return +9 ; }
+
+            int neg  ( void ) { return -9 ; }
+
+            int n ( void )
+            {
+                GO ( y , neg ) ;
+                return y ;
+            }
+
+            int z  ( void )
+            {
+                GO ( y , zero ) ;
+                return y ;
+            }
+
+            int p ( void )
+            {
+                GO ( y , one ) ;
+            }

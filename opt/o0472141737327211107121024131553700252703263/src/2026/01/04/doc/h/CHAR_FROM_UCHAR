@@ -1,0 +1,10 @@
+
+
+
+The char_from_uchar function "char_from_uchar.h"
+
+            The char_from_uchar function returns the
+            char-value corresponding to #0. If the return
+            value is then converted back into an unsigned
+            char value according to the Standard (N2176
+            6.3.1.3), the value of #0 is obtained.

@@ -1,0 +1,9 @@
+
+
+
+The reset Function "reset.h"
+
+            The reset function must be called during program
+            initialization in order to set up critical
+            components of the virtual machine. The reset
+            function initializes several objects.

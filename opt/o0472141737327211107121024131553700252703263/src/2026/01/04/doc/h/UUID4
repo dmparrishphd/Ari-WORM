@@ -1,0 +1,8 @@
+
+
+
+The uuid4 function
+
+            The uuid4 function is intended as a subprogram
+            of ari. It is intended to be used by the
+            development tools.

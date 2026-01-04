@@ -1,0 +1,19 @@
+
+
+
+Introduction
+
+            The documentation is organized into several
+            directories.
+
+            the doc-f directory contains frontmatter,
+            including the present file.
+
+            The doc directory contains one documentatin file
+            for each header file. That documentation
+            is focused on the macros, objects, and functions
+            discussed by the corresponding header.
+
+            The doc-e directory contains endnotes. The
+            topics therein may overlap with multiple header
+            files.

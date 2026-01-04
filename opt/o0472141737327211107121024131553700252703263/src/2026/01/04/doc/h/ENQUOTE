@@ -1,0 +1,7 @@
+
+
+
+The ENQUOTE Function-like Macro "enquote.h"
+
+            The ENQUOTE function-like macro expands to its
+            argument wrapped in double quotes.

@@ -1,0 +1,32 @@
+
+
+
+The DO Function-Like Macro "do.h"
+
+        The DO function-like macro has the effect that
+        the function specified by macro-argument #0 is
+        called with the arguments specified by the
+        remaining macro-arguments. Then, if the call
+        returned nonzero, an error message is sent to
+        the standard error stream and the function
+        containing the macro invocation returns a
+        positive value.
+          The function specified by macro-argument #0
+        shall return an int. The DO funciton-like macro
+        shall be applied only within a function
+        returning an int.
+          Example. The fun function always returns a
+        positive value.
+
+                int zero ( void ) { return 0 ; }
+
+                int one  ( void ) { return 1 ; }
+
+                int fun  ( void )
+                {
+                    DO ( zero ) ;
+                    DO ( one ) ; // always causes fun to return 1
+                    never_reached:
+                    DO ( zero ) ;
+                    return 0 ;
+                }

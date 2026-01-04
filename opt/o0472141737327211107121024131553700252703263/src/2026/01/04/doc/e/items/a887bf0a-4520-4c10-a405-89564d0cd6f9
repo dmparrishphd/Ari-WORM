@@ -1,0 +1,11 @@
+
+
+
+TRACER and TRACER_DECLARE
+
+    Examples
+
+            For example usages of TRACER and TRACER_DECLARE,
+            see the source code for the istream family of
+            functions, found in files with the prefix
+            "istream_".

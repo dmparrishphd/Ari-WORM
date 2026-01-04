@@ -1,0 +1,15 @@
+
+
+
+The istream_refetch function "istream_refetch.h"
+
+            The istream_refetch function attempts to read a
+            nonblank line of printing characters from the
+            standard input stream by calling istream_fetch.
+              If the call to istream_fetch fails, the
+            istream_refetch function returns a positive
+            value, indicating an error.
+              Otherwise, the call to istream_fetch succeeds;
+            the string corresponding to the line is found in
+            the object specified by #0, and the
+            istream_refetch function returns zero.

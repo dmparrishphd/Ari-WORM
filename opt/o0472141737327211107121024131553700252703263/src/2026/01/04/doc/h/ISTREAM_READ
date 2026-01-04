@@ -1,0 +1,26 @@
+
+
+
+The istream_read Function "istream_read.h"
+
+            The istream_read function is intended to support
+            the istream_refetch function.
+              The istream_read function attempts to read the
+            next line from stdin into the array indicated by
+            #0 using istream_skim.
+              If istream_skim produces an error, an error
+            message is sent to stderr and a positive value
+            is returned, indicating failure.
+              Otherwise, if the input was rejected, a
+            warning message is sent to stderr and a negative
+            value is returned, indicating atypical behavior.
+              Otherwise, if the characters of the data read
+            are all in character set P, the istream_read
+            function returns zero, indicating success and
+            the string which starts in the first character
+            array constitutes the data read.
+              Otherwise, the characters of the data read are
+            not all in character set P. The array is
+            cleared, a warning message is sent to sdterr and
+            the istream_read function returns a negative
+            value, indicating atypical behavior.

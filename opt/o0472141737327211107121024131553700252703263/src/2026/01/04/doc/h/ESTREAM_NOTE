@@ -1,0 +1,9 @@
+
+
+
+The estream_note Function "estream_note.h"
+
+            The estream_note function has the same behavior
+            as the estream_put_note function, except that
+            the estream_note function then returns a
+            negative value.

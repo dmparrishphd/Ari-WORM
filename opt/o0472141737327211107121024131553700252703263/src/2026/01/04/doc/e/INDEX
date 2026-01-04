@@ -1,0 +1,77 @@
+Keyword: estream_put_note
+Topic: calling 
+Item: edd971fa-9bff-4944-8a41-73e2e3f976d9
+
+Keyword: estream_put_error
+Topic: calling
+Item: edd971fa-9bff-4944-8a41-73e2e3f976d9
+
+Keyword: estream_put_warning
+Topic: calling
+Item: edd971fa-9bff-4944-8a41-73e2e3f976d9
+
+Keyword: estream_alert
+Topic: calling
+Item: edd971fa-9bff-4944-8a41-73e2e3f976d9
+
+Keyword: estream_warn
+Topic: calling
+Item: edd971fa-9bff-4944-8a41-73e2e3f976d9
+
+Keyword: estream_note
+Topic: calling
+Item: edd971fa-9bff-4944-8a41-73e2e3f976d9
+
+Item: edd971fa-9bff-4944-8a41-73e2e3f976d9
+Title: Calling 
+        estream_put_error,
+        estream_put_warning,
+        estream_put_note,
+        estream_alert, 
+        estream_warn, and
+        estream_note,
+
+Keyword: istream_refetch
+Topic: role in supporting input
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+
+Keyword: istream_fetch
+Topic: role in supporting input
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+
+Keyword: istream_read
+Topic: role in supporting input
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+
+Keyword: istream_skim
+Topic: role in supporting input
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+
+Keyword: istream_scan
+Topic: role in supporting input
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+
+Keyword: istream_scrape
+Topic: role in supporting input
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+
+Keyword: istream_pop
+Topic: role in supporting input
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+
+Item: 76cf411a-55d1-45f1-833c-d92f03c78c84
+Title: Reading from Standard Input
+
+Item: 250394e2-47c9-4395-b0d1-85e9437cd027
+Title: Control Flow Macros
+
+Keyword: TRACER_DECLARE
+Topic: example usage
+Item: a887bf0a-4520-4c10-a405-89564d0cd6f9
+
+Keyword: TRACER
+Topic: example usage
+Item: a887bf0a-4520-4c10-a405-89564d0cd6f9
+
+Item: a887bf0a-4520-4c10-a405-89564d0cd6f9
+Title: TRACER and TRACER_DECLARE

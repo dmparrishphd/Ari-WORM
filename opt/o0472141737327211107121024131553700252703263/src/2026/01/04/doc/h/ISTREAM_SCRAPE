@@ -1,0 +1,19 @@
+
+
+
+The istream_scrape Function "istream_scrape.h"
+
+            The typical behavior of the istream_scrape
+            function is to read the next character from
+            the standard input stream.
+              The istream_scrape function calls the
+            istream_pop function. If the istream_pop
+            function returns, the return code and the
+            character read are stored.
+              If istream_pop returns, the return-value is
+            stored. Then, if the return-value is non-zero,
+            it is returned. Otherwise, the return-value of
+            the call to istream_pop is zero; the character
+            read is converted to a { char } object and
+            stored in the initial byte of the object
+            specified by #0.

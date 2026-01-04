@@ -1,0 +1,11 @@
+
+
+
+The main Function "main.h"
+
+            The main function is called at program startup
+            (N2176 5.1.2.2.1).
+              The main function performs program
+            initialization, processes any command-line
+            arguments supplied by the host environment, then
+            returns control to the host environment.

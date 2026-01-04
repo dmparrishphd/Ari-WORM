@@ -1,0 +1,27 @@
+
+
+
+The istream_fetch Function "istream_read.h"
+
+            The istream_fetch function is intended to
+            support the istream_refetch function.
+              The istream_fetch function attempts to read
+            the next line of data from stdin via the
+            istream_read function.
+              If the call to the istream_read function is
+            successful, the corresponding data are stored in
+            the array specified by #0 and The istream_fetch
+            function returns 0, indicating success.
+              Otherwise, if the istream_read function
+            returns an error code, an error message is sent
+            to stderr and istream_fetch returns a positive
+            value, indicating an error.
+              Otherwise, if the istream_read function
+            returns a negative value, indicating atypical
+            behavior, the process repeats if fewer than
+            ISTREAM_HEIGHT calls to the istream_read
+            function have been made; otherwise,
+            ISTREAM_HEIGHT unsuccessful calls to istream_read
+            have been made: an error message is sent to
+            stderr and the istream_fetch function returns a
+            positive value, indicating an error.

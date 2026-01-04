@@ -1,0 +1,24 @@
+
+
+
+The istream_skip Function "istream_skip.h"
+
+            The istream_skip function attempts to read
+            characters from the standard input stream until
+            a new-line character is encountered. The
+            characters read are not stored.
+              If a file error occurs the istream_skip
+            function returns a positive value,
+            indicating failure.
+              Otherwise, if a new-line character is not
+            encountered after reading #0 characters, the
+            istream_skip function returns a positive value,
+            indicating failure.
+              Otherwise, if an end-of-file condition is
+            detected before a new-line character is read,
+            the istream_skip function returns a negative
+            value, indicating atypical behavior.
+              Otherwise, a new-line character has been
+            encountered within #0 characters and the
+            istream_skip function returns zero, indicating
+            success.

@@ -1,0 +1,29 @@
+
+
+
+The istream_skim Function "istream_skim.h"
+
+            The istream_skim function is intended to fetch
+            into the object specified by #0 the next line of
+            data from the standard input stream.
+              The istream_skim function repeatedly calls the
+            istream_scan function.
+              If a call to istream_scan fails, the
+            istream_skim function returns a positive value,
+            indicating an error.
+              Otherwise, if the istream_scan function
+            returns a negative value (atypical behavior),
+            the process repeats.
+              Otherwise, if the characters read are all
+            blank and fewer than ISTREAM_HEIGHT calls to
+            istream_scan have been made, the process
+            repeats.
+              Otherwise, if one or more nonblank
+            characters have been read on the initial
+            HSTR_LEN_MAX characters of the line, the
+            array stores the corresponding data and the
+            istream_skim function returns zero, indicating
+            success.
+              Otherwise, ISTREAM_HEIGHT blank lines have
+            been read; the istream_skim function returns a
+            positive value, indicating failure.

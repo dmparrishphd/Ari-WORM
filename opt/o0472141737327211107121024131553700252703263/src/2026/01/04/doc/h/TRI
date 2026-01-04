@@ -1,0 +1,18 @@
+
+
+
+The TRI Function-Like Macro "tri.h"
+
+            The TRI function-like macro has the effect that
+                -   the function specified by #0 is called with
+                    the arguments specified by any arguments
+                    specified after #0 then,
+                -   if the call returns a positive value, an
+                    error message is sent to the standard error
+                    stream and the function containing the macro
+                    invocation returns 1. Otherwise,
+                -   if the call returned zero,
+                    execution continues. Otherwise,
+                -   the call returned an negative value,
+                    and the function containing the macro
+                    invocation returns -1.
