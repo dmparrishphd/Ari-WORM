@@ -1,0 +1,14 @@
+
+
+
+The hex_lo function "hex.h"
+
+            The hex_lo function returns a character
+            representing the lower nybl of #0.
+
+
+
+The hex_hi function "hex.h"
+
+            The hex_hi function returns a character
+            representing the upper nybl of #0.

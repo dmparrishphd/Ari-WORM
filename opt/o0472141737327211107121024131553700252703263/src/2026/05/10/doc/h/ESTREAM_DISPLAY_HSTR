@@ -1,0 +1,15 @@
+
+
+
+The estream_display_hstr Function "estream_display_hstr.h"
+
+            The estream_display_hstr function writes to
+            the standard error stream, on its own line, the
+            short string indicated by #0.
+              Before writing the characters of the string,
+            the active position is advanced to the next line
+            if it is not already at the beginning of a line.
+            Similarly, after writing the string, the active
+            position is advanced to the beginning of the
+            following line if it is not already at the
+            beginning of a line.

@@ -1,0 +1,24 @@
+
+
+
+Argument Handling "args.h"
+
+            The args.h header specifies a struct that is
+            intended to facilitate argument handling.
+
+            Objects of type args should be modified by the
+            args_import function only.
+
+        Functions
+
+            The args_import function parses words from the
+            short string specified by #1 and initializes the
+            args object specified by #0 accordingly.
+
+            The args_nmemb function returns the number of
+            arguments represented by the args object
+            specified by #0.
+
+            The args_fetch function overwrites the array
+            specified by #0 with the #2-th argument of the
+            args object specified by #1.

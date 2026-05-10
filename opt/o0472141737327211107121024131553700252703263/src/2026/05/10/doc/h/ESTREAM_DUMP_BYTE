@@ -1,0 +1,7 @@
+The estream_dump_byte function "estream_dump_byte.h"
+
+            If #0 is not a null character, the corresponding
+            graphic character is written to the standard
+            error stream. Then, the two-digit hexadecimal
+            numeral corresponding to #1 is written to the
+            standard error stream.

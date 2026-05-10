@@ -1,0 +1,9 @@
+
+
+
+The estream_alert Function "estream_alert.h"
+
+            The estream_alert function has the same behavior
+            as the estream_put_error function, except that
+            the estream_alert function then returns a
+            positive value.

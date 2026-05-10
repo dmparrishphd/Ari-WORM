@@ -1,0 +1,11 @@
+
+
+
+The estream_put_wsep function "estream_put_wsep.h"
+
+            The estream_put_wsep function indirectly sends a
+            word separator to the standard error stream. The
+            word separator will be either a space or a line
+            break, depending on the word length specified by
+            #0: a space if a word of that length would fit
+            on the current line; a line break otherwise.

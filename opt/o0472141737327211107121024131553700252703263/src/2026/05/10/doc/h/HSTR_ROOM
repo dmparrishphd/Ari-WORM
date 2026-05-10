@@ -1,0 +1,9 @@
+
+
+
+The hstr_room function "hstr_room.h"
+
+            The hstr_room function returns the number of of
+            characters, which, if appended to the short
+            string specified by #0, will result in a
+            modified string of HSTR_SIZE_MAX characters.

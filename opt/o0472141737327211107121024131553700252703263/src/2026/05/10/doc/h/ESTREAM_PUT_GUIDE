@@ -1,0 +1,6 @@
+The estream_put_guide function "estream_put_guide.h"
+
+            The estream_put_guide function writes to
+            the standard error stream a sequence of
+            characters intended to facilitate eye
+            tracking among the output elements.

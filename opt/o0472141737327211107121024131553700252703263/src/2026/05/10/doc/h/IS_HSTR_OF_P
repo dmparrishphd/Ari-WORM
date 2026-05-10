@@ -1,0 +1,17 @@
+
+
+
+The is_hstr_of_p Function "is_hstr_of_p.h"
+
+            The is_hstr_of_p function behaves as if: 1) the
+            initial HSTR_SIZE_MAX characters of the array
+            specified by #0 were first copied to a
+            temporary, non-overlapping array of
+            HSTR_SIZE_MAX characters, and 2) the final
+            character of the temporary array is reassigned
+            to be a null character. Let s be the string
+            whose initial character is the initial character
+            of the temporary array.
+              The is_hstr_of_p function returns true if s is
+            a null string or every character of s---except
+            the TNC---is in character set P.

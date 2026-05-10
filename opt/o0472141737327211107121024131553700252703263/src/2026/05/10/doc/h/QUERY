@@ -1,0 +1,10 @@
+
+
+
+The query_pop function "query.h"
+
+            The query_pop function draws data from standard
+            input and writes the next word to the array
+            specified by #0. The query_pop function is
+            intended to be the primary means by which data
+            is read from standard input.

@@ -1,0 +1,13 @@
+
+
+
+The estream_prompt Function "estream_prompt.h"
+
+            The estream_prompt function writes to the
+            standard error stream, on its own line, a
+            sequence of characters intended to prompt the
+            user to supply input.
+              The intention is that the prompt also indicate
+            the maximum number of characters---from
+            character set P---that may be accepted from a
+            single line of input.

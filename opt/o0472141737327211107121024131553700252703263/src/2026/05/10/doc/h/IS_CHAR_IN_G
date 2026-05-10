@@ -1,0 +1,8 @@
+
+
+
+The is_char_in_g Function "is_char_in_g.h"
+
+            The is_char_in_g function returns true if #0 is
+            in character set G. Otherwise the is_char_in_g
+            returns false.

@@ -1,0 +1,9 @@
+
+
+
+The estream_warn Function "estream_warn.h"
+
+            The estream_warn function has the same behavior
+            as the estream_put_warning function, except that
+            the estream_warn function then returns a
+            negative value.

@@ -1,0 +1,12 @@
+
+
+
+The estream_put_word function "estream_put_word.h"
+
+            The estream_put_word function indirectly sends
+            the word specified by #0 to the standard error
+            stream. The word will be preceded by a word
+            separator. All other characters sent will be the
+            characters from character set G that correspond
+            to the characters of #0.
+            

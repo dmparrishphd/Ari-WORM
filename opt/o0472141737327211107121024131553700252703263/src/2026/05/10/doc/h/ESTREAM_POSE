@@ -1,0 +1,10 @@
+
+
+
+The estream_pose function "estream_pose.h"
+
+            The estream_pose function returns the index of
+            the active position relative to the left margin.
+            The first position has index zero. The last
+            position has an index of one less than
+            ESTREAM_TEXT_WIDTH.

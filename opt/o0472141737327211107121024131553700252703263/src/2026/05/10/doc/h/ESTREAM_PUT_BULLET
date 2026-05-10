@@ -1,0 +1,36 @@
+
+
+
+Standard Error Stream---Brief Messages "estream_put_bullet.h"
+
+    Macros
+
+            The macros
+
+                    ESTREAM_BULLET_ERROR
+                    ESTREAM_BULLET_WARNING and
+                    ESTREAM_BULLET_NOTE
+            
+            are each defined as string literals. Their
+            intended use is to be sent to the standard error
+            stream as prefixes to error, warning, and note
+            messages, respectively.
+
+    Functions
+
+        The estream_put_bullet Function
+
+            The estream_put_bullet function writes the
+            standard error stream, on its own line, the
+            prefix specified by #0, followed by the message
+            specified by #1.
+              If #0 is less than zero, the message is
+            considered a warning; otherwise, if #0 is equal
+            to zero, the message is considered a note;
+            otherwise, the message is considered an error
+            message.
+              The estream_put_bullet function returns a
+            negative value, indicating atypical behavior, if
+            #0 is negative; zero, indicating success,
+            if #0 is zero; otherwise a positive value,
+            indicating an error.

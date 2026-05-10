@@ -1,0 +1,9 @@
+
+
+
+The hstr_clear Function "hstr_clear.h"
+
+            The hstr_clear function clears the initial
+            HSTR_SIZE_MAX characters of the array specified
+            by #0. On return, the initial portion of the
+            array is a null string.

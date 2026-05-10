@@ -1,0 +1,20 @@
+The hstr_copy function "hstr_copy.h"
+
+    Description
+
+            The hstr_copy function copies the short string
+            specified by #1 to the array specified by #0,
+            the target.
+
+    Returns
+
+            If the objects speficied by the arguments
+            overlap and if the result of copying alters the
+            array specified by #1, a positive value is
+            returned, indicating an error. Otherwise, if the
+            initial HSTR_SIZE_MAX characters of the array
+            specified by #1 are not a string, a negative
+            value is returned, indicating atypical
+            behavior---#1 does not specify a short string.
+            Otherwise, a zero value is returned, indcating
+            success.

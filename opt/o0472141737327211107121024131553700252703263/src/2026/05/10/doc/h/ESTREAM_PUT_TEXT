@@ -1,0 +1,16 @@
+
+
+
+The estream_put_text function "estream_put_text.h"
+
+            The estream_put_text function is intended to
+            support the sending of embedded diagnostic and
+            error messages to the standard error stream.
+              The estream_put_text function indirectly sends
+            the words of the string specified by #0 to the
+            standard error stream. Leading and trailing
+            spaces are ignored. Words are separated by
+            spaces; each internal contiguous sequence of
+            spaces separating the words of the string
+            results in a word separator being sent to the
+            standard error stream.

@@ -1,0 +1,10 @@
+
+
+
+The estream_put_note Function "estream_put_note.h"
+
+            The estream_put_note function calls
+            estream_put_msg, specifying that the type of
+            message is a note. The arguments of the call to
+            estream_put_error are passed along to
+            estream_put_msg.

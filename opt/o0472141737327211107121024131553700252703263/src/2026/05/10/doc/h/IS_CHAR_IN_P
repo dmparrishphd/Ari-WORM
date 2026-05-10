@@ -1,0 +1,8 @@
+
+
+
+The is_char_in_p function "is_char_in_p.h"
+
+            The is_char_in_p function returns true if #0 is
+            in character set P. Otherwise the is_char_in_p
+            returns false.

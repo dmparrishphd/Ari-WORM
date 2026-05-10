@@ -1,0 +1,9 @@
+
+
+
+Dimensions "dims.h"
+
+            The dims.h header file prevents compilation
+            unless certain constraints are satisfied. These
+            constraints constitute design decisions and are
+            intended to allow simplifying assumptions.

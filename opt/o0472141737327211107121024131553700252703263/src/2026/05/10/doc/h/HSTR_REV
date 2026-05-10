@@ -1,0 +1,8 @@
+
+
+
+The hstr_rev function "hstr_rev.h"
+
+            The hstr_rev function reverses the order of the
+            non-null characters of the short string
+            specified by #0.

@@ -1,0 +1,12 @@
+
+
+
+The hstr_clean function "hstr_clean.h"
+
+            The hstr_clean function "hstr_clean.h" function
+            clears the last byte of the array of size
+            HSTR_SIZE_MAX that starts at the location
+            specified by #0, "the array." Then clears the
+            bytes from the end of the string whose initial
+            character is at the location specified by #0
+            through the end of the array.

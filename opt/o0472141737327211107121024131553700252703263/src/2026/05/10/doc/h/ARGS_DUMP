@@ -1,0 +1,8 @@
+
+
+
+The args_dump function "args_dump.h"
+
+            The args_dump function writes to the standard
+            error stream each argument of the args object
+            specified by #0.

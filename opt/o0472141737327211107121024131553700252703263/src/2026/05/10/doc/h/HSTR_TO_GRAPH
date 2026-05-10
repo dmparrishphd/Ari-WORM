@@ -1,0 +1,10 @@
+
+
+
+The hstr_to_graph function "hstr_to_graph.h"
+
+            The hstr_to_graph function modifies the short
+            string specified by #0 by replacing each
+            character with the corresponding character from
+            character set G. In particular, spaces are
+            converted to a "graphical space."

@@ -1,0 +1,45 @@
+
+
+Interactive-Attention--Signal Handling "sighnd.h"
+
+            The header "sighnd.h" declares the
+            sigint_respond and sigint_pending functions.
+
+            The sigint_pending function tells whether an
+            interactive attention interrupt is awaiting
+            processing.
+
+            The sigint_respond function must be called
+            during program initialization in order for
+            interactive attention signals to be handled the
+            design intends.
+              After program initialization, when an
+            interactive attention signal is detected, the
+            signal handler records the fact of detection by
+            setting an internal flag and disabling
+            interactive attention interrupts. If additional
+            interactive attention signals are detected when
+            the flag is set, there is no effect, since
+            interactive attention interrupts are disabled;
+            repeated attempts to raise and interactive
+            attention signal count as a single signal.
+              The sigint_respond function first disables
+            additional interrupts from interactive attention
+            signals. Then, if an interrupt is awaiting
+            processing, it is processed. Finally, interrupts
+            from interactive attention signals are enabled.
+            Therefore, if no interrupt is awaiting
+            processing, the net effect of the the
+            sigint_respond function is to enable interactive
+            attention signals.
+              Processing an interactive attention interrupt
+            constitutes prompting the user to indicate
+            whether the program should continue or end.
+              Future directions for the application of
+            sigint_respond include the handling of
+            interactive attention signals during processing,
+            at times other than those when a process is
+            awaiting user input, as during lengthy
+            calculations or infinite loops. Additional
+            options for program behavior subsequent to
+            interruption may be added.

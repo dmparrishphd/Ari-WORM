@@ -1,0 +1,24 @@
+
+
+
+The estream_puts Function "estream_puts.h"
+
+            The estream_puts function takes no action if #0
+            is a null pointer or if #0 specifies a null
+            string. Otherwise, the estream_put_phrase
+            function function indirectly writes to the
+            standard error stream the initial non-null
+            characters of the string pointed to by #0.
+              If there is not enough room on the current
+            line to write each of the initial characters, a
+            soft line break is inserted before writing the
+            characters specified by #0.
+              The number of characters written is limited to
+            HSTR_LEN_MAX.
+              Characters are sent to the standard error
+            stream via estream_put_hstr with the requisite
+            transformations.
+              The caller must guarantee that #0 indicates an
+            object whose initial HSTR_SIZE_MAX characters
+            are accessible or that contains a null character
+            within HSTR_SIZE_MAX characters.

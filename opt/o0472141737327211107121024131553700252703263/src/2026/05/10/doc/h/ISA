@@ -1,0 +1,19 @@
+
+
+
+Instruction Set Architecture "isa.h"
+
+            The operation_from_opcode function returns an
+            { operation } (a function pointer) corresponding
+            to the opcode specified by #0. All inputs result
+            in a valid return (possibly a pointer to a
+            "no operation" instruction).
+
+            The mnemonic_from_opcode function writes the
+            mnemonic (a short string) into the array
+            specified by #0 corresponding to the opcode
+            specified by #1.
+
+            The opcode_from_mnemonic function returns the
+            opcode corresponding to the mnemonic (a short
+            string) specified by #0.

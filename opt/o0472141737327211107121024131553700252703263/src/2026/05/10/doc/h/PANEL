@@ -1,0 +1,10 @@
+
+
+
+The panel function "panel.h"
+
+            The panel function provides a human-computer
+            interface for a group of Ari cores.
+
+            The panel function is intended as the default
+            action on boot.

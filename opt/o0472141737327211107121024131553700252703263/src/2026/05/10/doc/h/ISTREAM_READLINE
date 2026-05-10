@@ -1,0 +1,14 @@
+
+
+
+The istream_readline function "istream_readline.h"
+
+            The istream_readline function attempts to read a
+            non-blank line from stdin. On success, the
+            corresponding string is found in the array
+            specified by #0. The new-line character is
+            discarded; the The istream_readline function
+            terminates the program on file error,
+            end-of-file, if the array is filled before a
+            new-line character is encountered, or if too
+            many blank lines are read (KIS).

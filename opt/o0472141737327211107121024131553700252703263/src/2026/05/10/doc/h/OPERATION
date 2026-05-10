@@ -1,0 +1,13 @@
+
+
+
+The operation type "operation.h"
+
+            The typedef name operation specifies a function
+            pointer type.
+              The operation type is intended to support the
+            implementation of the instruction set.
+
+    See Also
+
+            See also "isa.h."

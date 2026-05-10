@@ -1,0 +1,19 @@
+
+
+
+The hstr_import function "hstr_import.h"
+
+            The hstr_import function clears the character
+            array specified by #0, the "array," then copies
+            the initial portion of the string pointed to by
+            #1, the "string" into the initial portion of the
+            array. If #1 is null, the hstr_import function
+            behaves as if the string were a null string.
+
+    Returns
+
+            The hstr_import function returns zero if the
+            entire string was copied into the array.
+            Otherwise, the hstr_function returns a negative
+            value, indicating an incomplete copy (the string
+            does not fit into the array).

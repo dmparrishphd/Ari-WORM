@@ -1,0 +1,13 @@
+
+
+
+The hstr_length function "hstr_length.h"
+
+            The hstr_length function returns the length of
+            the short string specified by the argument. The
+            argument must provide access to a sequence of
+            HSTR_SIZE_MAX characters. The hstr_end function
+            behaves as if the { HSTR_INDEX_MAX }-th
+            character of the sequence were a null character.
+            Unlike the strlen function, the hstr_length
+            function returns an int.

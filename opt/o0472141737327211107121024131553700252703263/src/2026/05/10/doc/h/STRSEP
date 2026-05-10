@@ -1,0 +1,10 @@
+
+
+
+The strsep function "strsep.h"
+
+            If #0 does not point to a string, the behavior
+            is undefined.
+              The parse function finds the first
+            character in the string that is a word-separator
+            and returns a pointer to that character.

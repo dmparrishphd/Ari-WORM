@@ -1,0 +1,10 @@
+
+
+
+The estream_put_error Function "estream_put_error.h"
+
+            The estream_put_error function calls
+            estream_put_msg, specifying that the type of
+            message is an error. The arguments of the call
+            to estream_put_error are passed along to
+            estream_put_msg.

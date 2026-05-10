@@ -1,0 +1,15 @@
+
+
+
+The parse function "parse.h"
+
+            If #1 does not point to a string, the behavior
+            is undefined.
+              The parse function finds the first character
+            in the string that is not a word-separator and
+            stores the corresponding index in the first
+            element of the array specified by #0.
+              Then, the parse function finds the first
+            character in the string that is a word-separator
+            and stores the corresponding index in the second
+            element of the array specified by #0.

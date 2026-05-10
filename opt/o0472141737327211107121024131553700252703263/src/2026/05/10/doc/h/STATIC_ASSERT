@@ -1,0 +1,11 @@
+
+
+
+The STATIC_ASSERT macro "static_assert.h"
+
+            The STATIC_ASSERT macro is a wrapper for
+            _Static_assert. The single parameter corresponds
+            with the first parameter of _Static_assert. The
+            STATIC_ASSERT macro automatically creates the
+            second argument for the corresponding
+            _Static_assert invocation.

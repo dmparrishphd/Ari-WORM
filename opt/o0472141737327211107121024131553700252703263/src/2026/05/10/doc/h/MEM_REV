@@ -1,0 +1,7 @@
+
+
+
+The mem_rev function "mem_rev.h"
+
+            The mem_rev function reverses the initial #1
+            bytes of the object pointed to by #0.

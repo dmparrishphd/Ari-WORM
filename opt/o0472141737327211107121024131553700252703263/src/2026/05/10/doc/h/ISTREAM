@@ -1,0 +1,38 @@
+
+
+
+Standard Input Stream Handling "istream.h"
+
+    Macros
+
+            The istream.h header file defines several macros
+            related to stdin.
+
+            The ISTREAM_HEIGHT macro specifies the presumed
+            number of lines on the display connected to
+            stdin.
+
+            The ISTREAM_TEXT_WIDTH macro specifies the
+            presumed maximum number of sequential printing
+            characters that can be input via stdin.
+
+            The ISTREAM_LOGICAL_LINE_LENGTH_MAX macro
+            specifies the maximum number of characters to be
+            processed between end-of-line-markers. The macro
+            is intended to support imposing a limit on the
+            number of characters skipped when long lines are
+            encountered.
+
+    Functions
+
+            The istream_error function tests the error
+            indicator for stdin. The istream_error function
+            returns a positive value if the error indicator
+            is set for stdin; otherwise, the istream_error
+            function returns zero.
+
+            The istream_eof function tests the end-of-file
+            indicator for stdin. The istream_eof function
+            returns a positive value if the end-of-file
+            indicator is set for stdin; otherwise, the
+            istream_eof function returns zero.

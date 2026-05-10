@@ -1,0 +1,12 @@
+
+
+
+The hstr_end function
+
+            The hstr_end function returns a pointer to the
+            last character of the short string specified by
+            the argument. The argument must provide access
+            to a sequence of HSTR_SIZE_MAX characters. The
+            hstr_end function behaves as if the
+            { HSTR_INDEX_MAX }-th character of the sequence
+            were a null character.

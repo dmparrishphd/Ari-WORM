@@ -1,0 +1,44 @@
+
+
+
+The Data Stack
+
+            An interface provides access to several stacks,
+            one for each core.
+
+            The initial argument of each access functions is
+            an int that specifies which stack is being
+            referenced.
+
+    Functions
+
+            The stack_reset function removes all data from
+            the stack and initializes an internal stack
+            pointer.
+
+            The stack_length function returns the number of
+            elements on the stack.
+
+            The stack_room function returns the number of
+            elements which could be added to the stack.
+
+            The stack_peek function returns the value of the
+            element on the top of the stack if there are any
+            stored elements. Otherwise, the stack_peek
+            function returns a negative value.
+
+            The stack_pull function behaves much the same as
+            the stack_peek function, except that if there
+            are any elements on the stack, the top element
+            is removed.
+
+            The stack_push function pushes the value of #1
+            onto the stack if there is room. The stack_push
+            function returns the value pushed, or, if the
+            stack is full, a negative value.
+
+            The stack_dump function writes to the standard
+            error stream a representation of the stack's
+            data. Elements closer to the top of the stack
+            are written before elements closer to the bottom
+            of the stack.

@@ -1,0 +1,10 @@
+
+
+
+The estream_dump_hstr function "estream_dump_hstr.h"
+
+            The estream_dump_hstr function writes to the
+            standard error stream the short string specified
+            by #0. Each character of the string is written
+            as a two-digit hexadecimal numeral preceded by
+            the substitute character.

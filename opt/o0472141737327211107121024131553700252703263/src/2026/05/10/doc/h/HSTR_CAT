@@ -1,0 +1,10 @@
+
+
+
+The hstr_cat function "hstr_cat.h"
+
+            The hstr_cat function modifies the string
+            pointed to by #0 (the target) as if the string
+            pointed to by #1 were appended to the target ,
+            then the target were truncated to HSTR_SIZE_MAX
+            characters.

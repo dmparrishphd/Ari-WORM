@@ -1,0 +1,258 @@
+
+
+
+The Virtual Machine "ari.h"
+
+            The ari.h header declares the operations of the
+            virtual machine and other functions that support
+            those operations.
+
+    Actions on All Cores
+
+        mari_reset
+
+            The mari_reset function resets all cores. When
+            called for the first time, memory is allocated
+            for the cores.
+
+        mari_unset
+
+            The mari_unset function is intended to be called
+            during program termination. The memory
+            initially allocated by mari_reset is freed.
+
+        mari_report_awake
+
+            The mari_report_awake function writes to the
+            standard error stream a representation of the
+            awake state of each core.
+
+        mari_rotate
+
+            The mari_rotate function activates the next
+            core. The mari_rotate function is intended to be
+            called when the current core is not awake.
+
+            If no cores are awake, the mari_rotate function
+            awakens and activates the primary core.
+
+    Actions on Individual Cores
+
+        ari_cold
+
+            The ari_cold function restarts the current node
+            as if it were starting up just after launch or
+            power-up.
+
+        ari_warm
+
+            The ari_warm function restarts the current node
+            while keeping certain elements intact, such as
+            any definitions.
+
+                                 * * * *
+
+        ari_is_awake
+
+            The ari_is_awake function tells whether the
+            active virtual machine is in an awake state.
+
+        ari_sleep
+
+            The ari_sleep function clears the awake flag of
+            the current node, switches to the primary node,
+            and sets the awake flag of the primary node.
+
+        ari_pause
+
+            The ari_pause function switches to the primary
+            node.
+
+        ari_focus
+
+            The ari_focus function makes the node specified
+            on the stack the current node.
+
+                                 * * * *
+
+        ari_wstack_dump
+
+            The ari_wstack_dump function writes to the
+            standard error stream the words on the word
+            stack.
+
+        ari_query
+
+            The ari_query function rotates the word stack
+            and replaces the new top word with the next word
+            from the standard input stream.
+
+                                 * * * *
+
+        ari_interpret
+
+            The ari_interpret function interprets the word
+            on the top of the word stack as a mnemonic.
+
+                                 * * * *
+
+        ari_opcode_from_mnemonic
+
+            The ari_opcode_from_mnemonic function pops a
+            word from the word stack and pushes the
+            corresponding op-code onto the stack, then
+            pushes a flag onto the stack. The flag tells
+            whether the word matched a mnemonic (zero
+            indicates a match or success).
+
+                                 * * * *
+
+        ari_mnemonics_dump
+
+            The ari_mnemonics_dump function writes to the
+            standard error stream the mnemonics
+            corresponding to the op-codes and basic operations.
+
+                                 * * * *
+
+        ari_nop
+
+            The ari_nop function does nothing except waste
+            time.
+
+    The Data Stack
+
+            There are two special registers which often
+            behave as if they were the top two elements of
+            the data stack. These two registers interact
+            with a true stack. In this section, the
+            registers are called T (top) and S (second).
+
+            T and S store either a numeric value from 0 to
+            UCHAR_MAX. T and S are nullable so that T and S,
+            together with the true stack together may be
+            viewed as a single stack.
+
+            If T stores a numeric value 0 to UCHAR_MAX, we
+            say that T is populated. Otherwise, we say that
+            T is unpopulated. Similarly for S.
+
+        ari_stack_dump
+
+            The ari_stack_dump function writes to the
+            standard error stream a representation of the
+            stack, including the stack depth, the number of
+            empty slots, the values of the registers, and
+            the values on the stack proper.
+
+        ari_dup
+
+            ( x -- x x )
+
+            The ari_dup function behaves as follows:---
+
+            If T and S are populated, S is pushed onto the
+            true stack. Then, T is copied into S. Thus, T is
+            duplicated.
+
+            Otherwise, if T is populated, but S is not, T is
+            copied unto S.
+
+            Otherwise, neither T nor S is populated; T and S
+            are each set to zero.
+
+        ari_drop
+
+            ( x -- )
+
+            The ari_drop function copies S into T. Then, if
+            the true stack is populated, the true stack is
+            popped and the popped value is copied onto S.
+
+        ari_over
+
+            ( a b -- a b a )
+            (     or       )
+            (   b -- 0 b 0 )
+            (     or       )
+            (     -- 0 0 0 )
+
+            The ari_over function behaves a follows:---
+
+            If both T and S are populated, The value of S is
+            stored---call the stored value R. Then, S is
+            pushed; T is copied into S; and R is copied into
+            T.
+
+            Otherwise, if T is populated but not S; the
+            ari_over function behaves as if the value of S
+            were zero.
+
+            Otherwise, neither T nor S is populated; the
+            ari_over function behaves as if both values were
+            zero.
+
+        ari_swap
+
+            ( a b -- b a )
+            (     or     )
+            (   b -- b 0 )
+            (     or     )
+            (     -- 0 0 )
+
+            The ari_swap function behaves as follows:---
+
+            If both T ans S are populated, their values are
+            swapped.
+
+            Otherwise, if T is populated but S is not, the
+            ari_swap function behaves as if the value of S
+            were zero.
+
+            Otherise, neither T nor S is populated, and no
+            action is taken. Conceptually, this may also be
+            viewed as swapping two null values.
+
+                                 * * * *
+
+        ari_zero
+
+            ( x y -- 0 0 )
+            (     or     )
+            (   x -- 0 0 )
+            (     or     )
+            (     -- 0 0 )
+
+            The ari_zero function sets both S and T to zero.
+            This is a destructive operation.
+
+        ari_add
+
+            ( a b -- s c )
+
+            The ari_add behaves as follows:---
+
+            The ari_add function affects only T and S.
+
+            If either T or S are empty, the ari_add function
+            behaves as if they were first set to zero.
+
+            The sum of T and S is computed and T and S are
+            overwritten with the sum: the least significant
+            byte in S and the most significant bit (the
+            carry bit) in T.
+
+        ari_nand
+
+            ( a b -- c c )
+
+            The ari_nand behaves as follows:---
+
+            The ari_nand function affects only T and S.
+
+            If either T or S are empty, the ari_add function
+            behaves as if they were first set to zero.
+
+            T NAND S is computed and the result is stored in
+            both S and T. Thus, ari_nand does not affect the
+            stack, proper.

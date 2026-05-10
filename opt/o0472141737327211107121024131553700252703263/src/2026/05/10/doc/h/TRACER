@@ -1,0 +1,39 @@
+
+
+
+Tracing "tracer.h"
+
+            The tracer.h header declares a type and defines
+            macros that are intended to facilitate the
+            tracing of control flow, particularly in cases
+            where errors or atypical behavior occur.
+
+    Types
+
+        struct s_tracer and
+        tracer
+
+            The typedef name tracer is an alias of the type
+            struct s_tracer.
+              It is intended that objects of type tracer be
+            used to facilitate the reporting of certain
+            aspects of control flow.
+              When used as intended, an object of type
+            tracer provides access to the current
+            function, file, and line number.
+
+    Macros
+
+            The macros TRACER_DECLARE and TRACER are
+            intended to be used together.
+
+            The TRACER_DECLARE macro expands to declare an
+            object of type tracer that is initialized to
+            specify the current function name and file name.
+            Upon initialization, the line number specified
+            by the object is not significant.
+
+            The TRACER macro expands to have the effect that
+            the line number specified by the object
+            previously declared by TRACER_DECLARE is updated
+            before providing a pointer to the object.
