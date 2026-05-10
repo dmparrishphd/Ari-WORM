@@ -1,0 +1,33 @@
+#!/bin/bash
+
+doExit () {
+    M=ERROR
+    test $# -ge 1  &&  M="$1"
+    echo >& 2 "$0: $M"
+    exit 1
+}
+
+test -d c    ||  exit 1
+test -d h    ||  exit 1
+test -d o    ||  exit 1
+test -d bin  ||  exit 1
+
+# ATTEMPT TO REMOVE FILES ONLY IF THERE ARE FILES TO REMOVE
+test $(ls -a o | wc --line) -gt 2  &&  rm o/*
+
+declare -r LIST=$(ls c)
+
+for C in $LIST
+do
+    [[ "$C" =~ ^[a-z][a-z_0-9]{,29}[.]c$ ]]  ||  doExit \
+            "Unexpected file name: \"c/$C\""
+done
+
+for C in $LIST
+do
+    B=${C:0:-1}o
+    gcc -c -Wall -std=c11  -iquote h  -o o/$B c/$C  ||  doExit \
+            "Could not compile c/$C"
+done
+
+gcc  -Wall -std=c11  -iquote h  -o bin/ari  o/*
